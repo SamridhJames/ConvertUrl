@@ -8,5 +8,7 @@ Current service has following features, but it can be made better in many ways.
 Below diagram gives basic understanding of the flow of the service.
 ![image](https://user-images.githubusercontent.com/91759794/175845056-0027854d-d29f-4212-8616-b2a535cd94e8.png)
 
-This is just a basic design, load balancer can also be added to protect the system. 
+This is just a basic design, load balancer, distributed cache can also be added to protect the system. 
 Proper indexing can be added into the database. NoSQL data bases like MongoDB Azure, etc. can also be integrated.
+
+Note: Tried to add Cors setting, but it did not work, hence used plugin to fix it.
