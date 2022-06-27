@@ -53,6 +53,10 @@ namespace ConvertUrlService.Services
             var urlData = _urlOperationsRepository.GetShortUrl(shortUrl);
             if (urlData == null) return string.Empty;
 
+            if (urlData.LongUrl.StartsWith(Uri.UriSchemeHttp))
+            {
+                return urlData.LongUrl;
+            }
             if (!urlData.LongUrl.StartsWith(Uri.UriSchemeHttps))
             {
                 urlData.LongUrl = Uri.UriSchemeHttps + "://" + urlData.LongUrl;
